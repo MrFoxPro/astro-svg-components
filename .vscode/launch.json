@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "command": "pnpm dev",
+      "name": "Start app",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/examples/app"
+    }
+  ],
+  "compounds": []
+}

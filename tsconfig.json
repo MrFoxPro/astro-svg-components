@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "sourceMap": false,
+    "target": "ESNext",
+    "module": "ESNext",
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node",
+    "skipDefaultLibCheck": true,
+    "declarationDir": "./dist",
+    "types": ["vite/client"]
+  },
+  "exclude": ["node_modules", "dist", "example"],
+  "include": ["./package/*"]
+}

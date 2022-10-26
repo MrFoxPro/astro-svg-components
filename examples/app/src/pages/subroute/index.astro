@@ -1,0 +1,20 @@
+---
+import CircleIcon from '@/svgs/circle.svg?astrosvg'
+const icons = import.meta.glob('@/svgs/*.svg', { as: 'astrosvg', eager: true })
+console.log(icons)
+---
+
+<html lang="en">
+  <head>
+    <style lang="css">
+      .icon {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    Circle: <CircleIcon class="icon" />
+    <!-- {Object.entries(files).map(([path, Icon]) => <Icon class="icon" />)} -->
+    <a href="/">Back</a>
+  </body>
+</html>
