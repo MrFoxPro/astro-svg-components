@@ -37,3 +37,13 @@ const icons = globSVG('@/svgs/*.svg')
 <CircleIcon class="icon">
 {icons.map((Icon) => <Icon class="icon" />)}
 ```
+
+tsconfig:
+
+```json
+{
+  "compilerOptions": {
+    "types": ["@foxpro/astro-svg-components/types"]
+  }
+}
+```
