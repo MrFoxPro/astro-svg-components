@@ -27,8 +27,8 @@ Astro file:
 
 ```jsx
 ---
-import CircleIcon from '@/svgs/circle.svg?astrosvg'
-const icons = import.meta.glob('@/svgs/*.svg', { as: 'astrosvg', eager: true })
+import CircleIcon from '@/svgs/circle.svg?component-astro'
+const icons = import.meta.glob('@/svgs/*.svg', { as: 'component-astro', eager: true })
 
 import { globSVG } from '@foxpro/astro-svg-components'
 const icons = globSVG('@/svgs/*.svg')

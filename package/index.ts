@@ -10,7 +10,7 @@ export type AstroSVGComponentsIntegrationOptions = {
    */
   byDefault?: boolean
 }
-
+const ext_prefix = 'component-astro'
 export default function AstroSVGComponents({
   byDefault = false,
 }: AstroSVGComponentsIntegrationOptions = {}): AstroIntegration {
@@ -25,7 +25,7 @@ export default function AstroSVGComponents({
   const shouldProcess = (p: string, qs: string) => {
     if (!p.endsWith('svg')) return false
     const params = new URLSearchParams(qs)
-    return (byDefault && !Array.from(params.entries()).length) || params.has('astrosvg')
+    return (byDefault && !Array.from(params.entries()).length) || params.has(ext_prefix)
   }
 
   const ViteAstroSvgComponents: Plugin = {
@@ -71,4 +71,4 @@ export default function AstroSVGComponents({
 }
 
 export const globSVG = (pattern: string) =>
-  Object.values(import.meta.glob(pattern, { as: 'astrosvg', eager: true, import: 'default' }))
+  Object.values(import.meta.glob(pattern, { as: ext_prefix, eager: true, import: 'default' }))
